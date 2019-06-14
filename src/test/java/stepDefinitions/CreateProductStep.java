@@ -57,7 +57,7 @@ public class CreateProductStep extends CommonTestCase {
 
 	@When("^I Input \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$")
 	public void i_Input_and_and_and_and_and_and_and_and(String image, String productName, String decription,
-			String quantity, String price, String weight, String width, String length, String height) {
+			String quantity, String price, String weight, String width, String length, String height) throws Exception {
 		if (!(checkNullString(image))) {
 			createProductPage.uploadIMG(pathImage + image);
 		}
@@ -77,6 +77,7 @@ public class CreateProductStep extends CommonTestCase {
 		createProductPage.inputLength(length);
 		createProductPage.inputHeight(height);
 		createProductPage.clickPost();
+		Thread.sleep(10000);
 	}
 
 //	@When("^I input random Product Name$")
@@ -84,10 +85,17 @@ public class CreateProductStep extends CommonTestCase {
 //		createProductPage.inputNameProduct(productName + randomName());
 //	}
 
-	@When("^I Select random combobox Chọn danh mục so (\\d+)$")
-	public void i_Select_random_combobox_Chọn_danh_mục_so(int arg1) {
+	@When("^I Select random combobox Chọn danh mục so mot$")
+	public void i_Select_random_combobox_Chọn_danh_mục_so() {
 		createProductPage.clickCate1();
 		createProductPage.clickRandomValueCate1();
+
+	}
+
+	@When("^I Select random combobox Chọn danh mục so hai$")
+	public void i_Select_random_combobox_Chọn_danh_mục_hai() {
+		createProductPage.clickCate2();
+		createProductPage.clickRandomValueCate2();
 
 	}
 

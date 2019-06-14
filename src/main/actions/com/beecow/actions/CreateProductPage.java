@@ -185,8 +185,9 @@ public class CreateProductPage extends CommonFunction {
 	}
 
 	public void clickPost() {
-		waitVisible(CreateProductPageUI.POST_BTN);
-		click(CreateProductPageUI.POST_BTN);
+		hover(CreateProductPageUI.POST_BTN);
+		executeScriptBrowser("$('button[beetranslate=\"beecow.item.action.post\"]').click()");
+//		click(CreateProductPageUI.POST_BTN);
 	}
 
 	public void clickUpdate() {
@@ -354,8 +355,6 @@ public class CreateProductPage extends CommonFunction {
 		String currrentUrl = driver.getCurrentUrl();
 		assertEquals(currrentUrl, "https://www.beecow.com/page/upload-product");
 	}
-
-	
 
 //	public String gettextDetailSoldout() {
 //		waitVisible(CreateProductPageUI.DETAIL_SOLDOUT);
