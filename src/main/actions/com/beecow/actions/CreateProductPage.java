@@ -185,9 +185,8 @@ public class CreateProductPage extends CommonFunction {
 	}
 
 	public void clickPost() {
-		hover(CreateProductPageUI.POST_BTN);
-		executeScriptBrowser("$('button[beetranslate=\"beecow.item.action.post\"]').click()");
-//		click(CreateProductPageUI.POST_BTN);
+		waitVisible(CreateProductPageUI.POST_BTN);
+		click(CreateProductPageUI.POST_BTN);
 	}
 
 	public void clickUpdate() {

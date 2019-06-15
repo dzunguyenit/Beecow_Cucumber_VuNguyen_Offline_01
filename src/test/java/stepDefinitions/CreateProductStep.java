@@ -35,7 +35,7 @@ public class CreateProductStep extends CommonTestCase {
 	}
 
 	@When("^I click button Post$")
-	public void i_click_button_Post() {
+	public void i_click_button_Post() throws Exception {
 		createProductPage.clickPost();
 	}
 
@@ -77,7 +77,6 @@ public class CreateProductStep extends CommonTestCase {
 		createProductPage.inputLength(length);
 		createProductPage.inputHeight(height);
 		createProductPage.clickPost();
-		Thread.sleep(10000);
 	}
 
 //	@When("^I input random Product Name$")

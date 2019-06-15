@@ -12,7 +12,7 @@ public class CreateProductPageUI {
 
 	// BUTTON //button[@class='left btn-line-grey']
 	public static final String POST_PRODUCT_BTN = "//li[@class='inner-menu-mobile']//a[@beetranslate='beecow.menu.store.uploadProduct']";
-	public static final String POST_BTN = "//button[@class='btn-solid-orange']//span[contains(text(),'Đăng')]";
+	public static final String POST_BTN = "//button[@beetranslate='beecow.item.action.post']";
 	public static final String UPDATE_BTN = "//button[@beetranslate=\"beecow.item.action.update\"]/span";
 	public static final String DELETE_BTN = "//button[@class='left btn-line-grey']";
 	public static final String DELETE_CONFIRM_BTN = "//div[@class='modal-dialog tiny']//button[@class='btn-line-pink']";

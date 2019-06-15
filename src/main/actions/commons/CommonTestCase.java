@@ -16,7 +16,7 @@ public class CommonTestCase {
 	public static WebDriver openBrowser() {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
-		String version = "2.46";
+		String version = "74.0.3729.6";
 		String url = "https://www.beecow.com";
 		ChromeDriverManager.getInstance().version(version).setup();
 		driver = new ChromeDriver(options);
